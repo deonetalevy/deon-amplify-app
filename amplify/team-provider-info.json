@@ -1,19 +1,19 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-deonamplifyapp-dev-6847d-authRole",
-      "UnauthRoleArn": "arn:aws:iam::211125604428:role/amplify-deonamplifyapp-dev-6847d-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::211125604428:role/amplify-deonamplifyapp-dev-6847d-authRole",
+      "AuthRoleName": "amplify-deonamplifyapp-dev-4de87-authRole",
+      "UnauthRoleArn": "arn:aws:iam::211125604428:role/amplify-deonamplifyapp-dev-4de87-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::211125604428:role/amplify-deonamplifyapp-dev-4de87-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-deonamplifyapp-dev-6847d-deployment",
-      "UnauthRoleName": "amplify-deonamplifyapp-dev-6847d-unauthRole",
-      "StackName": "amplify-deonamplifyapp-dev-6847d",
-      "StackId": "arn:aws:cloudformation:us-east-1:211125604428:stack/amplify-deonamplifyapp-dev-6847d/c587e950-276a-11ef-9ded-12c0566bb2bb",
-      "AmplifyAppId": "d2jkh51p1ppx69"
+      "DeploymentBucketName": "amplify-deonamplifyapp-dev-4de87-deployment",
+      "UnauthRoleName": "amplify-deonamplifyapp-dev-4de87-unauthRole",
+      "StackName": "amplify-deonamplifyapp-dev-4de87",
+      "StackId": "arn:aws:cloudformation:us-east-1:211125604428:stack/amplify-deonamplifyapp-dev-4de87/219ec720-2777-11ef-8181-0affd12ed549",
+      "AmplifyAppId": "d3bste1hzppg4x"
     },
     "categories": {
       "auth": {
-        "deonamplifyapp7d72c0a5": {}
+        "deonamplifyappa9a15274": {}
       }
     }
   }
