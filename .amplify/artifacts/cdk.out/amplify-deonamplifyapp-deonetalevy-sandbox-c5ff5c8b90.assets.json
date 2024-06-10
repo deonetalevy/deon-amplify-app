@@ -1,0 +1,19 @@
+{
+  "version": "36.0.0",
+  "files": {
+    "4e76ea60771163bbd4b58ee93a1b8e62ea88ed6e876dac5158a64f0eafc846ff": {
+      "source": {
+        "path": "amplify-deonamplifyapp-deonetalevy-sandbox-c5ff5c8b90.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "4e76ea60771163bbd4b58ee93a1b8e62ea88ed6e876dac5158a64f0eafc846ff.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

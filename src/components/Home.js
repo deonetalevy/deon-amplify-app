@@ -1,8 +1,6 @@
 import React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import BlogList from './BlogList';
-import BlogPost from './BlogPost';
 
 const Home = () => (
   <Container>
