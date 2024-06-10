@@ -54,4 +54,5 @@ const App = () => (
   </ThemeProvider>
 );
 
+
 export default withAuthenticator(App);
