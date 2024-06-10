@@ -15,6 +15,12 @@ import Contact from './components/Contact';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
+import "@aws-amplify/ui-react/styles.css";
+import {
+  withAuthenticator,
+  Authenticator
+} from "@aws-amplify/ui-react";
+
 
 const App = () => (
   <ThemeProvider theme={theme}>
@@ -34,8 +40,18 @@ const App = () => (
         <Route path ="*" element={<NotFound/>} />
       </Routes>
       <Footer />
+      <Authenticator>
+      {({ signOut, user }) => (
+        <div className="App">
+          <p>
+            Hey {user.username}, welcome to my website, with auth!
+          </p>
+          <button onClick={signOut}>Sign out</button>
+        </div>
+      )}
+      </Authenticator>
     </Router>
   </ThemeProvider>
 );
 
-export default App;
+export default withAuthenticator(App);
