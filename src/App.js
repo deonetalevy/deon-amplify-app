@@ -20,7 +20,7 @@ import {
   withAuthenticator,
   Authenticator
 } from "@aws-amplify/ui-react";
-
+import './App.css';
 
 const App = () => (
   <ThemeProvider theme={theme}>
