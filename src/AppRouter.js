@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -15,7 +15,8 @@ import Contact from './components/Contact';
 import "@aws-amplify/ui-react/styles.css";
 import {
   withAuthenticator,
-  Authenticator
+  Authenticator,
+  Button
 } from "@aws-amplify/ui-react";
 import './App.css';
 import './transitions.css'; 
@@ -23,12 +24,21 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const AppRouter = ({ transitionClassNames, footerTransitionClassNames }) => {
   const location = useLocation();
+  const [footerVisible, setFooterVisible] = useState(false);
+
+  const handlePageEntered = () => {
+    setFooterVisible(true);
+  };
+
+  const handlePageExit = () => {
+    setFooterVisible(false);
+  };
 
   return(
       <>
         <Header />
         <TransitionGroup>
-          <CSSTransition key={location.key} classNames={transitionClassNames} timeout={300}>
+          <CSSTransition key={location.key} classNames={transitionClassNames} timeout={300} onEntered={handlePageEntered} onExit={handlePageExit}>
             <Routes location={location}>
               <Route exact path="/" element={<Home/>} />
               <Route path="/about" element={<About/>} />
@@ -43,20 +53,21 @@ const AppRouter = ({ transitionClassNames, footerTransitionClassNames }) => {
             </Routes>
           </CSSTransition>
         </TransitionGroup>  
-        <CSSTransition key={location.key} classNames={footerTransitionClassNames} timeout={300} >
-          <Footer location={location} />
+        <CSSTransition in={footerVisible} classNames={footerTransitionClassNames} timeout={300} unmountOnExit>
+          <Footer />
         </CSSTransition>
-        <Authenticator>
-          {({ signOut, user }) => (
-            <div className="App">
-              <p>
-                Hey {user.username}, welcome to my website, with auth!
-              </p>
-              <button onClick={signOut}>Sign out</button>
-            </div>
-          )}
-          </Authenticator>
-
+        <CSSTransition in={footerVisible} classNames={footerTransitionClassNames} timeout={300} unmountOnExit>
+          <Authenticator>
+            {({ signOut, user }) => (
+              <div className="App">
+                <p>
+                  Hey {user.username}, welcome to my website, with auth!
+                </p>
+                <Button variant="contained" color="primary" onClick={signOut}>Sign Out</Button>
+              </div>
+            )}
+            </Authenticator>
+        </CSSTransition>
       </>
   );  
 };
