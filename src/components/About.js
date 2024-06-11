@@ -14,7 +14,7 @@ const About = () => (
       Introduction
     </Typography>
     <Typography variant="body1" paragraph>
-      Hello! I'm [Your Name], a passionate software engineer with a knack for developing innovative web applications. I love transforming ideas into reality using code.
+      Hello world. I'm Deone'Ta Levy, a passionate software engineer. I love computers.
     </Typography>
     
     <Divider />
@@ -23,12 +23,12 @@ const About = () => (
       Professional Background
     </Typography>
     <Typography variant="body1" paragraph>
-      Over the past [number] years, I have worked with several companies and clients, delivering high-quality software solutions. My expertise lies in frontend development, particularly with React.js, but I also have experience in backend technologies.
+      Over the past six years, I have worked with several companies, delivering high-quality software solutions. My expertise lies in backend development, particularly with C#, but I also have experience in frontend technologies.
     </Typography>
     
     <Divider />
     
-    
+
     <Typography variant="h4" component="h2" gutterBottom>
       Skills and Expertise
     </Typography>
