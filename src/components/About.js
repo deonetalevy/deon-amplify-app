@@ -28,6 +28,7 @@ const About = () => (
     
     <Divider />
     
+    
     <Typography variant="h4" component="h2" gutterBottom>
       Skills and Expertise
     </Typography>
