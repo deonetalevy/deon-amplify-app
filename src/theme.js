@@ -1,118 +1,70 @@
 // src/theme.js
 import { createTheme } from '@mui/material/styles';
-import { red, green, blueGrey, amber } from '@mui/material/colors';
 
 const theme = createTheme({
   palette: {
+    mode: 'dark', // This sets the overall theme to dark
     primary: {
-      main: blueGrey[700], // Darker primary color
+      main: '#90caf9', // Light blue
     },
     secondary: {
-      main: amber[700], // Rich secondary color
-    },
-    error: {
-      main: red.A400, // Custom error color
-    },
-    success: {
-      main: green[500], // Custom success color
+      main: '#f48fb1', // Pink
     },
     background: {
-      default: '#f4f6f8', // Light background color
-      paper: '#ffffff', // Paper background color
+      default: '#121212', // Dark background
+      paper: '#1e1e1e', // Slightly lighter dark background for paper components
     },
     text: {
-      primary: '#2c3e50', // Primary text color
-      secondary: '#34495e', // Secondary text color
+      primary: '#ffffff', // White text
+      secondary: '#b0bec5', // Grey text
     },
   },
   typography: {
-    fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+    fontFamily: 'Roboto, sans-serif',
     h1: {
-      fontSize: '2.5rem',
-      fontWeight: 700,
-      color: '#2c3e50',
+      color: '#ffffff',
     },
     h2: {
-      fontSize: '2rem',
-      fontWeight: 600,
-      color: '#2c3e50',
+      color: '#ffffff',
     },
     h3: {
-      fontSize: '1.75rem',
-      fontWeight: 500,
-      color: '#2c3e50',
+      color: '#ffffff',
+    },
+    h4: {
+      color: '#ffffff',
+    },
+    h5: {
+      color: '#ffffff',
+    },
+    h6: {
+      color: '#ffffff',
     },
     body1: {
-      fontSize: '1rem',
-      color: '#2c3e50',
+      color: '#ffffff',
     },
     body2: {
-      fontSize: '0.875rem',
-      color: '#34495e',
-    },
-    button: {
-      fontSize: '1rem',
-      textTransform: 'none',
-      fontWeight: 600,
+      color: '#b0bec5',
     },
   },
-  shape: {
-    borderRadius: 8, // Rounded corners for all components
-  },
-  spacing: 8, // Default spacing unit (can be used for padding, margin, etc.)
   components: {
     MuiAppBar: {
       styleOverrides: {
         root: {
-          backgroundColor: blueGrey[900], // Custom background color for the AppBar
-          color: '#fff',
+          backgroundColor: '#333333', // Darker background for the AppBar
         },
       },
     },
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: '20px', // Custom border radius for buttons
-          padding: '8px 16px', // Custom padding for buttons
-        },
-        containedPrimary: {
-          backgroundColor: blueGrey[700],
-          '&:hover': {
-            backgroundColor: blueGrey[800],
-          },
-        },
-        containedSecondary: {
-          backgroundColor: amber[700],
-          '&:hover': {
-            backgroundColor: amber[800],
-          },
+          color: '#ffffff', // White text for buttons
         },
       },
     },
     MuiCard: {
       styleOverrides: {
         root: {
-          boxShadow: '0 3px 6px rgba(0,0,0,0.1)', // Custom box shadow for cards
-          borderRadius: '12px', // Custom border radius for cards
-          padding: '16px', // Custom padding for cards
-        },
-      },
-    },
-    MuiTypography: {
-      styleOverrides: {
-        root: {
-          marginBottom: '16px', // Custom margin for typography
-        },
-      },
-    },
-    MuiLink: {
-      styleOverrides: {
-        root: {
-          color: blueGrey[700], // Custom color for links
-          '&:hover': {
-            color: blueGrey[800], // Custom hover color for links
-            textDecoration: 'none', // Custom hover effect for links
-          },
+          backgroundColor: '#1e1e1e', // Dark background for cards
         },
       },
     },
